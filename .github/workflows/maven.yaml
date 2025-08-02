@@ -1,17 +1,19 @@
-name: Maven Build on GitHub
+name: Maven Build
 
 on:
   push:
-    branches: [ "main" ]
+    branches:
+      - master
   pull_request:
-    branches: [ "main" ]
+    branches:
+      - master
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout Code
+      - name: Checkout code
         uses: actions/checkout@v4
 
       - name: Set up Java
@@ -22,3 +24,4 @@ jobs:
 
       - name: Build with Maven
         run: mvn clean install
+        working-directory: JavaWebCalculator
