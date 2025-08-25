@@ -25,9 +25,9 @@ jobs:
             password: ${{ secrets.DOCKER_PASSWORD }}
       - name: build image and push to docker hun
         run: |
-        IMAGE= docker.io/${{ secrets.DOCKER_USERNAME }}/${{ REPO_NAME }}
         docker build -t ${{ secrets.DOCKER_USERNAME }}/${{ REPO_NAME }}:${{ github.sha }} .
         docker push ${{ secrets.DOCKER_USERNAME }}/${{ REPO_NAME }}:${{ github.sha }}
+
 
 
 
