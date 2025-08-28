@@ -11,7 +11,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Set up Java
+      - name: Set up Javaa
         uses: actions/setup-java@v4
         with:
           java-version: '17'
@@ -43,6 +43,7 @@ jobs:
         run: kubectl apply -f pod.yml
                
         
+
 
 
 
